@@ -30,6 +30,9 @@ public class UserProfile
         userID = givenID;
         genre= givenGenre;
     }
+    public UserProfile()
+    {
+    }
 
     /**
      * A getter for the userID
@@ -59,6 +62,32 @@ public class UserProfile
      */
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+    
+    public String checkGenre()
+    {
+        String hold = "Incorect genre. Please restart the program to reenter input";
+        
+        for (int i = 0; i < genres.length; i++)
+        {
+            if (genre.equals(genres[i]))
+            {
+                hold = "Genre entered";
+            }
+            
+            
+        }
+        return hold;
+        
+        
+    }
+    public void displayArray()
+    {
+          for (int i = 0; i < genres.length; i++)
+          {
+              System.out.println(genres[i]);
+          
+          }
     }
     
     
